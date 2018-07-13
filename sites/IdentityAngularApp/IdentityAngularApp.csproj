@@ -1,0 +1,28 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <TypeScriptToolsVersion>2.8</TypeScriptToolsVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="src\app\common\constants.ts" />
+    <None Remove="src\app\services\app.api.service.ts" />
+    <None Remove="src\app\services\app.auth.service.ts" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\js\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.9" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <TypeScriptCompile Include="src\app\common\constants.ts" />
+    <TypeScriptCompile Include="src\app\services\app.api.service.ts" />
+    <TypeScriptCompile Include="src\app\services\app.auth.service.ts" />
+  </ItemGroup>
+
+</Project>
